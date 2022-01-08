@@ -49,6 +49,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../components/styles/abstract/_variables.scss";
+@import "../components/styles/layout/_card.scss";
 
 .cards__columns {
   justify-content: space-evenly;
@@ -62,21 +63,21 @@ export default {
   flex-wrap: wrap;
 }
 
-.cards__columns > * {
+.cards__columns > .cards {
   flex: 1;
   justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
-  margin: -10px;
   flex: 1 1 160px;
-  margin: 10px;
+  margin: 0.6rem;
 }
 
 .cards {
   border-radius: 25px;
-  border: 2px solid #99c5e8;
+  border: 0.25rem solid #99c5e8;
   background: #f5f4ef;
-  align-items: stretch;
+  align-items: center;
+  justify-content: center;
   display: flex;
 }
 .cards__picture {
@@ -86,12 +87,14 @@ export default {
 }
 
 .card__body {
-  align-items: stretch;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card__contact-btn {
- 
+  align-items: center;
+  justify-content: center;
 }
 
 .geo__logo {

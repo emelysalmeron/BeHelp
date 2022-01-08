@@ -22,7 +22,8 @@
         />
         {{ volunteer.location[1] }}
       </div>
-      <a class="card__contact-btn" style="color:red" href="#" role="button">Link</a>
+      <a class="card__contact-btn" style="color:red"
+       href="#" role="button">CONTACT ME</a>
     </div>
   </div>
 </template>
