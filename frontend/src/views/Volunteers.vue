@@ -33,12 +33,72 @@ export default {
           <!-- {{ this.results }} -->
           
         </pre>
-          <Card v-for="volunteer in volunteers" v-bind:volunteer="volunteer" />
+          <div class="col-6">
+            <div class="cards__columns">
+              <Card
+                v-for="volunteer in volunteers"
+                v-bind:volunteer="volunteer"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
 <style lang="scss" scoped>
-@import '../components/styles/abstract/_variables.scss';
+@import "../components/styles/abstract/_variables.scss";
+
+.cards__columns {
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  align-self: center;
+  margin: 1em;
+  flex-wrap: wrap;
+}
+
+.cards__columns > * {
+  flex: 1;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+  flex: 1 1 160px;
+  margin: 10px;
+}
+
+.cards {
+  border-radius: 25px;
+  border: 2px solid #99c5e8;
+  background: #f5f4ef;
+  align-items: stretch;
+  display: flex;
+}
+.cards__picture {
+  align-self: flex-start;
+  border-radius: 25px;
+  border: 5px solid #a00000;
+}
+
+.card__body {
+  align-items: stretch;
+  display: flex;
+}
+
+.card__contact-btn {
+ 
+}
+
+.geo__logo {
+  justify-items: stretch;
+}
+
+.geo__text {
+  color: #99c5e8;
+}
 </style>
